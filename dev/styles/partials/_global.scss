@@ -31,7 +31,6 @@ h2 {
 }
 
 h3 {
-	border: 1px solid green;
 	font-family: $primaryFont;
 	font-weight: 700;
 	color: $black;
@@ -70,7 +69,29 @@ a {
 // LAYOUT
 body {
 	font-size: 62.5%;
-	background: rgb(53,87,140);
+	background: linear-gradient(271deg, #35578c, #7a925a, #442439);
+	background-size: 600% 600%;
+	-webkit-animation: AnimationName 49s ease infinite;
+	animation: AnimationName 49s ease infinite;
+}
+
+
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 81%}
+    50%{background-position:100% 20%}
+    100%{background-position:0% 81%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 81%}
+    50%{background-position:100% 20%}
+    100%{background-position:0% 81%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 81%}
+    50%{background-position:100% 20%}
+    100%{background-position:0% 81%}
 }
 
 .wrapper {

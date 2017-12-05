@@ -1,11 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
+import { Nav } from './app'
 
 class Credits extends React.Component {
    render () {
       return (
          <div>
+             <header className="clearfix">
+                <div className="wrapper">
+                    <Link to="/"><h1 className="headerLogo">Levidrome Validator</h1></Link>
+                    <Nav />
+                </div>
+            </header>
             <div className="wrapper">
                 <section className="creditSection">
                     <h3>Credits</h3>

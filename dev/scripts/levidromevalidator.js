@@ -37,8 +37,7 @@ const key = '10faf101cb01f99e61fe0358e0807373';
 const id = 'ba5599bf';
 //'a31a2791'; first id
 const definitionURL = 'entries';
-const wordURL = 'inflections';
-// let definition = res.data.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0]
+const wordURL = 'inflections';	
 
 export default class LevidromeValidator extends React.Component {
 	constructor() {
@@ -93,8 +92,7 @@ export default class LevidromeValidator extends React.Component {
 	// first API request to check if the submitted word is valid or not
 	findRoot(word) {
 		return this.runRequest(wordURL, word).then((i) => {
-			return i.data.results[0].lexicalEntries[0].inflectionOf[0].id
-				
+			return i.data.results[0].lexicalEntries[0].inflectionOf[0].id	
 		})
 	}
 
@@ -114,16 +112,15 @@ export default class LevidromeValidator extends React.Component {
 
 	//takes the firstWord from child component
 	levidrome(firstWord) {
-
 		// console.log(firstWord)
 		this.setState({definitions: []})
 		const flippedWord = this.flipWord(firstWord)
-		console.log(firstWord)
-		console.log(flippedWord)
-		//runRequest to verify the entered words are valid.Store the root words, which are the 'id' property into firstRootWord and flippedRootWord and push them into the rootWords Array.
-		
+		// console.log(firstWord)
+		// console.log(flippedWord)
+		//runRequest to verify the entered words are valid. Store the root words, which are the 'id' property into firstRootWord and flippedRootWord and push them into the rootWords Array.
 		const firstRootWord = this.findRoot(firstWord)
 		.then((firstRoot) => {
+			// clear word array and push first root word into word array
 			const validatedWordArray = [];
 			//push the first word into wordsArray
 			validatedWordArray.push(firstWord)
@@ -135,17 +132,13 @@ export default class LevidromeValidator extends React.Component {
 			}, () => {
 				const firstDef = this.getDefinition(this.state.firstRootWord)
 				.then((definition) => {
-					// clear word array and push first root word into word array
-					
 					// clear array and then push definitions into definition array
 							const newDef = [];
 							newDef.push(definition)
 							this.setState({ 	
 								definitions : newDef
 							});
-							console.log(validatedWordArray);
 							this.getFlippedDef();
-
 						})
 					}
 				)
@@ -161,7 +154,6 @@ export default class LevidromeValidator extends React.Component {
 				this.setState({ 
 					wordsArray : secondValidatedWord
 				})
-				console.log(this.state.wordsArray);
 				//push validated levidrome words to firebase
 				if (this.state.wordsArray.length === 2) {
 					this.addToFirebase();
@@ -178,8 +170,7 @@ export default class LevidromeValidator extends React.Component {
 							this.setState({
 								definitions : newDef2
 							})
-							console.log(this.state.definitions)
-							
+							// console.log(this.state.definitions)
 						})
 					}
 				)
@@ -188,7 +179,6 @@ export default class LevidromeValidator extends React.Component {
 
 		addToFirebase() {
 			const dbRef = firebase.database().ref()
-			
 			dbRef.push(
 				{
 					firstWord: this.state.firstWord,
@@ -219,11 +209,10 @@ export default class LevidromeValidator extends React.Component {
 						<div className="logo">
 							<img src="./public/styles/images/levidrome-icon-white.png" alt=""/>
 						</div>
-						<p className="introText"> A <span className="wordExample">levidrome</span> is a word that spells another, valid word backwards, such as <span className="wordExample">stop</span> and <span className="wordExample">pots</span>.</p>
+						<p className="introText"> A <span className="wordExample">levidrome</span> is a word that spells another valid word backwards, such as <span className="wordExample">stop</span> and <span className="wordExample">pots</span>.</p>
 						<p className="instructions">Enter a word below to verify whether or not it's a levidrome!</p>
 					</div>
 				</div>
-
     				{/* main input for word */}
 				<MainInput handleChange={this.handleChange} submitWord={this.levidrome} displayFlipped={this.state.flippedWord} displayFirst={this.state.firstWord}/>
 			<div className="row">
@@ -293,8 +282,7 @@ class MainInput extends React.Component {
 
 	handleChange(e) {
 		this.setState({submittedWord: e.target.value})
-		console.log(e.target.value)
-
+		// console.log(e.target.value)
 		//send to value to parent so you can set textValue state from parent
 		this.props.handleChange(e.target.value)
 	}

@@ -1,14 +1,13 @@
 // ABOUT SECTION
 
 .aboutLevidrome {
-    background: $neutralBlue;
+    background: rgba(255, 255, 255, 0.35);
     margin: 25px 0;
 }
 
 .historyText {
     padding: 10px 0 10px 45px;
     // margin: 10px 0 10px 45px;
-    border: 1px solid purple;
 }
 
 .dictionaryText{
@@ -19,8 +18,8 @@ iframe {
     display: block;
     margin: 0 auto;
     padding: 10px 0;
-    border: 1px solid lime;
 }
+
 
 //CREDITS SECTION
 .creditSection {

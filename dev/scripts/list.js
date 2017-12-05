@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import * as firebase from 'firebase';
+import { Nav } from './app';
 
 
 class List extends React.Component {
@@ -18,8 +19,6 @@ class List extends React.Component {
       const dbRef = firebase.database().ref()
 
       dbRef.on('value', (firebaseData) => {
-         console.log('cow');
-         console.log(firebaseData.val());
          const pairArray = [];
          const levidromeData = firebaseData.val();
 
@@ -52,9 +51,15 @@ class List extends React.Component {
     render() {
         return (
             <div className="row">
-                <div className="wrapper">
-                <h2>List of Levidromes</h2>
-                    <ul className="levidromeList">
+               <header className="clearfix">
+                  <div className="wrapper">
+                     <Link to="/"><h1 className="headerLogo">Levidrome Validator</h1></Link>
+                     <Nav />
+                  </div>
+               </header>
+               <div className="wrapper">
+               <h2>List of Levidromes</h2>
+                  <ul className="levidromeList">
                         {this.state.uniquePairs.map((pair) => {
                         return (
                            <ul key={pair.key} className="pairing">
@@ -63,8 +68,8 @@ class List extends React.Component {
                            </ul>
                         )
                         })}
-                    </ul>
-                </div>
+                  </ul>
+               </div>
             </div>
         )
     }

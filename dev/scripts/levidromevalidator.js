@@ -222,7 +222,7 @@ export default class LevidromeValidator extends React.Component {
 					})}
 				</div>
 			</div>
-			<div className="featureButtons">
+			<div className="featureButtons mobileButtons">
 				<FeaturedButtons clearInputs={this.clear} />
 				<div className="twitter"><Twitter /></div>
 			</div>
@@ -246,7 +246,7 @@ class FeaturedButtons extends React.Component {
 	render() {
 		return (
 			<div className="featureButtons clearfix">
-				<button className="clear" onClick={this.clearInput}>clear</button>
+				<button className="clear" onClick={this.clearInput}>Clear</button>
 			</div>
 		)
 	}
@@ -306,7 +306,7 @@ class MainInput extends React.Component {
 						onChange={this.handleChange}
 						value={this.props.displayFirst} />
 					<div className="clearfix">
-						<div className="wrapper">
+						<div className="submit wrapper">
 								<div className="clearfix"><i className="fa fa-exchange fa-4x" aria-hidden="true"></i>
 								</div>
 								<div className="clearfix">

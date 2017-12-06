@@ -3,16 +3,78 @@
       font-size: 1.8rem;
       top:85px;
    }
-
    ul.headerSection li {
       margin: 10px;
    }
 }
 
+@media (max-width:835px) {
+   .headerSection {
+      font-size: 1rem;
+   }
+   p.definitionText {
+      margin: 30px 60px;
+   }
+}
 
-// @media(max-width:768px) {
+@media(max-width:768px) {
+   .headerSection {
+      visibility: hidden;
+   }
+}
 
-// }
+@media(max-width: 650px) {
+   button.submit, i.fa {
+      top:-110px;
+      left:0;
+      right:0;
+   }
+   .col-2 {
+      width: 100%;
+      margin: 10px auto;
+   }
+   input {
+      width: 60%;
+   }
+   
+   .firstWord {
+      position: relative;
+      top: 40px;
+   }
+   .secondWord {
+      margin-top: 20px;
+      position: relative;
+      top: 30px;
+   }
+   .displayDefinitions {
+      top: -200px;
+   }
 
-// @media(max-width:375px) {
-// }
+   .mobileButtons {
+      position: relative;
+      top: 8%;
+   }
+}
+@media(max-width:400px) {
+   .row {
+      margin: 10px auto;
+   }
+   
+   input {
+      width: 80%;
+   }
+
+   p.definitionText {
+      margin-top: 50px;
+      position: relative;
+      top: 20px;
+   }
+
+   .levidrome .row {
+      margin: 50px auto;
+   }
+   .mobileButtons {
+      bottom: 50%;
+      top: -15%;
+   }
+}

@@ -49,8 +49,11 @@ input {
     width: 80%;
 }
 
-.relative {
+.featureButtons {
+    @extend .row;
+    margin: -20px auto;
     position: relative;
+    top: -20px;
 }
 
 button.submit, button.clear {
@@ -89,6 +92,7 @@ i.fa {
     position: relative;
     top: -100px;
     z-index: -5;
+    margin-bottom: -40px;
 }
 
 p.introText, p.instructions, p.definitionText {
@@ -99,4 +103,8 @@ p.introText, p.instructions, p.definitionText {
 p.instructions {
         padding-top: 20px;
         margin-bottom: -30px;
+    }
+
+    .twitter {
+        margin-top: 20px;
     }

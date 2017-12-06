@@ -222,9 +222,9 @@ export default class LevidromeValidator extends React.Component {
 					})}
 				</div>
 			</div>
-			<div className="clearfix">
+			<div className="featureButtons">
 				<FeaturedButtons clearInputs={this.clear} />
-				<Twitter />
+				<div className="twitter"><Twitter /></div>
 			</div>
 			</main>
 		)

@@ -2,24 +2,34 @@
 
 .aboutLevidrome {
     background: rgba(255, 255, 255, 0.35);
-    margin: 25px 0;
+    h3 {
+        margin-bottom: 20px;
+    }
 }
 
-.historyText {
-    padding: 10px 0 10px 45px;
-    // margin: 10px 0 10px 45px;
+.textWrapper {
+    @extend .wrapper;
+    margin: 30px auto;
 }
 
-.dictionaryText{
-    padding: 10px 45px 10px 0;
+.aboutLevidrome, .creditSection {
+    padding: 30px;
 }
 
-iframe {
+iframe.video {
     display: block;
-    margin: 0 auto;
-    padding: 10px 0;
+    width: 80%;
+    height:290px;
+    margin: 15px;
 }
 
+.vid1 {
+    float: right;
+}
+
+.vid2 {
+    float: left;
+}
 
 //CREDITS SECTION
 .creditSection {
@@ -43,4 +53,24 @@ iframe {
 
 .sourceText a:hover {
     color: $white;
+}
+
+ul.testimonials {
+    @extend .wrapper;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    li {
+        list-style: none;
+        width: 30%;
+        margin: 20px;
+        float: left;
+        .testimonialsLogo {
+            width: 100%;
+            padding: 10px;
+            img {
+                width: 100%;
+            }
+        }
+    }
 }

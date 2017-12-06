@@ -1,13 +1,18 @@
-@media(max-width:960px) {
+@media (max-width:960px) {
+   h1.headerLogo {
+      font-size: 1.8rem;
+      top:85px;
+   }
 
-
-
+   ul.headerSection li {
+      margin: 10px;
+   }
 }
 
 
-@media(max-width:768px) {
+// @media(max-width:768px) {
 
-}
+// }
 
-@media(max-width:375px) {
-}
+// @media(max-width:375px) {
+// }

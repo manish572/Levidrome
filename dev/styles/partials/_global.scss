@@ -6,127 +6,127 @@
 	// p general paragraph styling
 	// p definition styling extends p general w/added flare
 
-h1 {
-	font-family: $primaryFont;
-	// color: $primaryColor;
-	color: $neutralBlue;
-	font-size: 2.4rem;
-	text-align: left;
-	text-transform: uppercase;
-	text-shadow: 1px 1px 1px $white,
-	0 0 0 #000, 1px 1px 1px $white;
-	// text-shadow: 1px 4px 6px $primaryColor,
-	// 0 0 0 #000, 1px 4px 6px $primaryColor;
-	font-weight: 700;
-}
-
-h2 {
-	font-family: $primaryFont;
-	color: $neutralBlue;
-	font-size: 1.8rem;
-	text-align: left;
-	margin: 10px 0;
-	clear: both;
-}
-
-h3 {
-	font-family: $primaryFont;
-	font-weight: 700;
-	color: $black;
-	text-transform: uppercase;
-	font-size: 1.6rem;
-	margin: 0;
-	clear: both;
-}
-
-h4 {
-	font-family: $secondaryFont;
-	color: $secondaryColor;
-	font-size: 1.3rem;
-	margin: 0;
-}
-
-p {
-	font-family: $secondaryFont;
-	color: $black;
-	font-weight: bold;
-	font-size: 1.2rem;
-	margin: 0;
-}
-
-a {
-	color: $white;
-	font-family: $primaryFont;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	// font-weight: 700;
-	// font-size: 1.2rem;
-	text-decoration: none;
-}
-
-// LAYOUT
-body {
-	font-size: 62.5%;
-	background: linear-gradient(271deg, #35578c, #7a925a, #442439);
-	background-size: 600% 600%;
-	-webkit-animation: AnimationName 49s ease infinite;
-	animation: AnimationName 49s ease infinite;
-}
-
-
-
-
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 81%}
-    50%{background-position:100% 20%}
-    100%{background-position:0% 81%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 81%}
-    50%{background-position:100% 20%}
-    100%{background-position:0% 81%}
-}
-@keyframes AnimationName { 
-    0%{background-position:0% 81%}
-    50%{background-position:100% 20%}
-    100%{background-position:0% 81%}
-}
-
-.wrapper {
-	width: 80%;
-	margin: 0 auto;
-	&::after {
-	@extend .clearfix;
+	h1 {
+		font-family: $primaryFont;
+		// color: $primaryColor;
+		color: $neutralBlue;
+		font-size: 2.4rem;
+		text-align: left;
+		text-transform: uppercase;
+		text-shadow: 1px 1px 1px $white,
+		0 0 0 #000, 1px 1px 1px $white;
+		// text-shadow: 1px 4px 6px $primaryColor,
+		// 0 0 0 #000, 1px 4px 6px $primaryColor;
+		font-weight: 700;
 	}
-}
-
-.row {
-	margin: 100px auto;
-	width: 100%;
-	clear: both;
-}
-
-[class*='col-'] {
-	float: left;
-}
-
-.col-2 {
-	width: 50%;
-}
-
-.col-3 {
-	width: 33%;
-}
-
-.col-2-3 {
-	width: 66%;
-
-}
-
-.col-4 {
-	width: 25%;
-}
-
-.col-3-4 {
-	width: 75%;
-}
+	
+	h2 {
+		font-family: $primaryFont;
+		color: $neutralBlue;
+		font-size: 1.8rem;
+		text-align: left;
+		margin: 10px 0;
+		clear: both;
+	}
+	
+	h3 {
+		font-family: $primaryFont;
+		font-weight: 700;
+		color: $black;
+		text-transform: uppercase;
+		font-size: 1.6rem;
+		margin: 0;
+		clear: both;
+	}
+	
+	h4 {
+		font-family: $secondaryFont;
+		color: $secondaryColor;
+		font-size: 1.3rem;
+		margin: 0;
+	}
+	
+	p {
+		font-family: $secondaryFont;
+		color: $black;
+		font-weight: bold;
+		font-size: 1.2rem;
+		margin: 0;
+	}
+	
+	a {
+		color: $white;
+		font-family: $primaryFont;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		// font-weight: 700;
+		// font-size: 1.2rem;
+		text-decoration: none;
+	}
+	
+	// LAYOUT
+	body {
+		font-size: 62.5%;
+		background: linear-gradient(271deg, #35578c, #7a925a, #442439);
+		background-size: 600% 600%;
+		-webkit-animation: AnimationName 49s ease infinite;
+		animation: AnimationName 49s ease infinite;
+	}
+	
+	
+	
+	
+	@-webkit-keyframes AnimationName {
+		 0%{background-position:0% 81%}
+		 50%{background-position:100% 20%}
+		 100%{background-position:0% 81%}
+	}
+	@-moz-keyframes AnimationName {
+		 0%{background-position:0% 81%}
+		 50%{background-position:100% 20%}
+		 100%{background-position:0% 81%}
+	}
+	@keyframes AnimationName { 
+		 0%{background-position:0% 81%}
+		 50%{background-position:100% 20%}
+		 100%{background-position:0% 81%}
+	}
+	
+	.wrapper {
+		width: 80%;
+		margin: 0 auto;
+		&::after {
+		@extend .clearfix;
+		}
+	}
+	
+	.row {
+		margin: 100px auto;
+		width: 100%;
+		clear: both;
+	}
+	
+	[class*='col-'] {
+		float: left;
+	}
+	
+	.col-2 {
+		width: 50%;
+	}
+	
+	.col-3 {
+		width: 33%;
+	}
+	
+	.col-2-3 {
+		width: 66%;
+	
+	}
+	
+	.col-4 {
+		width: 25%;
+	}
+	
+	.col-3-4 {
+		width: 75%;
+	}
